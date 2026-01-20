@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CopyMaster Pro - Gerador de Copy de Alta Conversão</title>
+    <meta
+      name="description"
+      content="Gere copy persuasivo e anúncios de alta conversão para produtos físicos e digitais"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <div class="logo">
+            <span class="logo-icon">✨</span>
+            <h1>CopyMaster Pro</h1>
+          </div>
+          <nav class="nav">
+            <button class="nav-btn active" data-view="generator">
+              <span class="icon">🚀</span> Gerador
+            </button>
+            <button class="nav-btn" data-view="saved">
+              <span class="icon">💾</span> Salvos
+            </button>
+            <button class="nav-btn" data-view="tips">
+              <span class="icon">💡</span> Dicas
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Generator View -->
+        <section id="generator-view" class="view active">
+          <div class="hero-section">
+            <h2 class="hero-title">Crie Copy de Alta Conversão em Segundos</h2>
+            <p class="hero-subtitle">
+              Transforme características do produto em benefícios irresistíveis
+              que vendem
+            </p>
+          </div>
+
+          <div class="generator-container">
+            <!-- Input Form -->
+            <div class="input-panel card">
+              <h3 class="panel-title">
+                <span class="icon">📝</span>
+                Informações do Produto
+              </h3>
+
+              <form id="product-form">
+                <div class="form-group">
+                  <label for="product-type">Tipo de Produto</label>
+                  <select id="product-type" required>
+                    <option value="">Selecione...</option>
+                    <option value="digital">
+                      Produto Digital (Curso, E-book, Software)
+                    </option>
+                    <option value="physical">Produto Físico</option>
+                    <option value="service">Serviço</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="product-name">Nome do Produto</label>
+                  <input
+                    type="text"
+                    id="product-name"
+                    placeholder="Ex: Tênis Esportivo Pro Runner"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="product-category">Categoria/Nicho</label>
+                  <input
+                    type="text"
+                    id="product-category"
+                    placeholder="Ex: Fitness, Tecnologia, Moda"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="target-audience">Público-Alvo</label>
+                  <input
+                    type="text"
+                    id="target-audience"
+                    placeholder="Ex: Mulheres 25-40 anos que praticam corrida"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="main-benefit">Principal Benefício</label>
+                  <textarea
+                    id="main-benefit"
+                    rows="2"
+                    placeholder="Ex: Reduz o impacto nas articulações em até 40%"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="features"
+                    >Características Principais (separe por vírgula)</label
+                  >
+                  <textarea
+                    id="features"
+                    rows="3"
+                    placeholder="Ex: Tecnologia de amortecimento avançada, Design ergonômico, Material respirável"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="pain-points">Dores/Problemas que Resolve</label>
+                  <textarea
+                    id="pain-points"
+                    rows="3"
+                    placeholder="Ex: Dores após corrida, Lesões recorrentes, Desconforto durante treinos longos"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="price">Preço (opcional)</label>
+                  <input type="text" id="price" placeholder="Ex: R$ 299,00" />
+                </div>
+
+                <div class="form-group">
+                  <label for="copy-type">Tipo de Copy</label>
+                  <select id="copy-type" required>
+                    <option value="">Selecione...</option>
+                    <option value="product-description">
+                      Descrição de Produto (E-commerce)
+                    </option>
+                    <option value="facebook-ad">
+                      Anúncio Facebook/Instagram
+                    </option>
+                    <option value="google-ad">Anúncio Google Ads</option>
+                    <option value="email-sales">Email de Vendas</option>
+                    <option value="landing-page">Landing Page Completa</option>
+                    <option value="social-media">
+                      Post para Redes Sociais
+                    </option>
+                    <option value="whatsapp">Mensagem WhatsApp</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="formula">Fórmula de Copywriting</label>
+                  <select id="formula" required>
+                    <option value="">Selecione...</option>
+                    <option value="aida">
+                      AIDA (Atenção, Interesse, Desejo, Ação)
+                    </option>
+                    <option value="pas">
+                      PAS (Problema, Agitação, Solução)
+                    </option>
+                    <option value="fab">
+                      FAB (Features, Advantages, Benefits)
+                    </option>
+                    <option value="4ps">
+                      4 P's (Problema, Promessa, Prova, Proposta)
+                    </option>
+                    <option value="bab">BAB (Before, After, Bridge)</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                  <span class="icon">✨</span>
+                  Gerar Copy
+                </button>
+              </form>
+            </div>
+
+            <!-- Output Panel -->
+            <div class="output-panel card">
+              <div class="panel-header">
+                <h3 class="panel-title">
+                  <span class="icon">🎯</span>
+                  Copy Gerado
+                </h3>
+                <button
+                  id="copy-all-btn"
+                  class="btn-secondary"
+                  style="display: none"
+                >
+                  <span class="icon">📋</span>
+                  Copiar Tudo
+                </button>
+              </div>
+
+              <div id="output-content" class="output-content">
+                <div class="empty-state">
+                  <div class="empty-icon">✏️</div>
+                  <h4>Aguardando informações</h4>
+                  <p>
+                    Preencha o formulário ao lado para gerar copy de alta
+                    conversão
+                  </p>
+                </div>
+              </div>
+
+              <div
+                id="variations-container"
+                class="variations-container"
+                style="display: none"
+              >
+                <h4 class="variations-title">Variações Adicionais</h4>
+                <div id="variations-content"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Saved View -->
+        <section id="saved-view" class="view">
+          <div class="hero-section">
+            <h2 class="hero-title">Suas Copies Salvas</h2>
+            <p class="hero-subtitle">
+              Acesse e gerencie todas as suas copies criadas
+            </p>
+          </div>
+
+          <div id="saved-copies-container" class="saved-copies-grid">
+            <!-- Saved copies will be displayed here -->
+          </div>
+        </section>
+
+        <!-- Tips View -->
+        <section id="tips-view" class="view">
+          <div class="hero-section">
+            <h2 class="hero-title">Dicas de Copywriting</h2>
+            <p class="hero-subtitle">
+              Aprenda as melhores técnicas para criar copy que converte
+            </p>
+          </div>
+
+          <div class="tips-grid">
+            <div class="tip-card card">
+              <div class="tip-icon">🎯</div>
+              <h3>Fórmula AIDA</h3>
+              <p>
+                <strong>Atenção:</strong> Capture a atenção com um gancho
+                poderoso
+              </p>
+              <p>
+                <strong>Interesse:</strong> Desperte interesse mostrando
+                relevância
+              </p>
+              <p><strong>Desejo:</strong> Crie desejo destacando benefícios</p>
+              <p><strong>Ação:</strong> Incentive a ação com CTA claro</p>
+            </div>
+
+            <div class="tip-card card">
+              <div class="tip-icon">💡</div>
+              <h3>Fórmula PAS</h3>
+              <p><strong>Problema:</strong> Identifique a dor do cliente</p>
+              <p>
+                <strong>Agitação:</strong> Intensifique a dor com consequências
+              </p>
+              <p>
+                <strong>Solução:</strong> Apresente seu produto como solução
+              </p>
+            </div>
+
+            <div class="tip-card card">
+              <div class="tip-icon">⚡</div>
+              <h3>Gatilhos Mentais</h3>
+              <ul class="tip-list">
+                <li><strong>Escassez:</strong> "Últimas unidades"</li>
+                <li><strong>Urgência:</strong> "Oferta válida por 24h"</li>
+                <li>
+                  <strong>Prova Social:</strong> "+10.000 clientes satisfeitos"
+                </li>
+                <li>
+                  <strong>Autoridade:</strong> "Recomendado por especialistas"
+                </li>
+                <li>
+                  <strong>Reciprocidade:</strong> "Teste grátis por 7 dias"
+                </li>
+              </ul>
+            </div>
+
+            <div class="tip-card card">
+              <div class="tip-icon">🎨</div>
+              <h3>Palavras Poderosas</h3>
+              <div class="power-words">
+                <span class="word-tag">Grátis</span>
+                <span class="word-tag">Novo</span>
+                <span class="word-tag">Garantido</span>
+                <span class="word-tag">Comprovado</span>
+                <span class="word-tag">Exclusivo</span>
+                <span class="word-tag">Limitado</span>
+                <span class="word-tag">Transforme</span>
+                <span class="word-tag">Descubra</span>
+                <span class="word-tag">Revolucionário</span>
+                <span class="word-tag">Resultados</span>
+              </div>
+            </div>
+
+            <div class="tip-card card">
+              <div class="tip-icon">📊</div>
+              <h3>Estrutura de Headlines</h3>
+              <ul class="tip-list">
+                <li>Use números: "7 Maneiras de..."</li>
+                <li>Faça perguntas: "Cansado de...?"</li>
+                <li>Promessa de resultado: "Como Alcançar..."</li>
+                <li>Benefício claro: "Economize 50%..."</li>
+                <li>Urgência: "Hoje Ou Nunca..."</li>
+              </ul>
+            </div>
+
+            <div class="tip-card card">
+              <div class="tip-icon">✅</div>
+              <h3>Checklist de Copy</h3>
+              <ul class="tip-list">
+                <li>✓ Foca em benefícios, não características</li>
+                <li>✓ Usa linguagem do público-alvo</li>
+                <li>✓ Tem um CTA claro e específico</li>
+                <li>✓ Inclui prova social ou garantia</li>
+                <li>✓ Cria senso de urgência</li>
+                <li>✓ É fácil de ler e escanear</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Toast Notification -->
+      <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
